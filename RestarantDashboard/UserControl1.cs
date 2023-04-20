@@ -20,7 +20,7 @@ namespace RestarantDashboard
 
         static readonly string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static readonly string ApplicationName = "RestaurantDashboard";
-        static readonly string SpreadsheetId = "1IjKC6S7XlTwX3zV5LluioFVrMUid1u2UBs3KfeMWvoY";
+        static readonly string SpreadsheetId = "1bPWpKSvywPYtiD_j1TSUMCBcb13YBg-ivaVNMiTJdjU";
         static readonly string sheet = "Released_Orders";
         static SheetsService service;
 
@@ -57,7 +57,7 @@ namespace RestarantDashboard
         private void activeOrdersList_SelectedIndexChanged(object sender, EventArgs e)
         {
             GoogleCredential credential;
-            using (var stream = new FileStream("C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\Client_Secret\\restaurantdashboard-aa8a54bd56c9.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream("C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\Client_Secret\\restaurantdashboard-384320-d450b5056d5f.json", FileMode.Open, FileAccess.Read))
             {
                 credential = GoogleCredential.FromStream(stream)
                     .CreateScoped(Scopes);
@@ -78,7 +78,7 @@ namespace RestarantDashboard
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             GoogleCredential credential;
-            using (var stream = new FileStream("C:\\Users\\piotr\\source\\repos\\GoogleSheet\\Client_Secret\\restaurantdashboard-aa8a54bd56c9.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream("C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\Client_Secret\\restaurantdashboard-384320-d450b5056d5f.json", FileMode.Open, FileAccess.Read))
             {
                 credential = GoogleCredential.FromStream(stream)
                     .CreateScoped(Scopes);
