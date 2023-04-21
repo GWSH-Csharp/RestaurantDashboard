@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "qWFaVCCeZDXEbVf0hnEVJvRlX5E91gqARPlZ0A2ppB4NF7Z/TfmIgcDXrk+lLuXYFTpqPHm1Lg0oO+4WMgRBKQ==",
+  "dgSpecHash": "4u2ShvzFUFQ4PnFVLt2NCJeVR0eDcR/N6HAtg/KDCy0KgKeCyemammArObFFH46qOlyySgzTWX0OH/T7xa/X/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
+  "projectFilePath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\piotr\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
-    "C:\\Users\\piotr\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
-    "C:\\Users\\piotr\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
-    "C:\\Users\\piotr\\.nuget\\packages\\google.apis.sheets.v4\\1.60.0.2979\\google.apis.sheets.v4.1.60.0.2979.nupkg.sha512",
-    "C:\\Users\\piotr\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis.sheets.v4\\1.60.0.2979\\google.apis.sheets.v4.1.60.0.2979.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }

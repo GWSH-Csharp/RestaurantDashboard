@@ -219,24 +219,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\piotr\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\fafa1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
+      "projectUniqueName": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
       "projectName": "RestarantDashboard",
-      "projectPath": "C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
-      "packagesPath": "C:\\Users\\piotr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\RestarantDashboard\\obj\\",
+      "projectPath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
+      "packagesPath": "C:\\Users\\fafa1\\.nuget\\packages\\",
+      "outputPath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\RestarantDashboard\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\fafa1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
