@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             activeOrdersList = new CheckedListBox();
+            timerRefreshOrdersList = new System.Windows.Forms.Timer(components);
             textBox1 = new TextBox();
             SuspendLayout();
             // 
@@ -41,13 +43,19 @@
             activeOrdersList.TabIndex = 0;
             activeOrdersList.SelectedIndexChanged += activeOrdersList_SelectedIndexChanged;
             // 
+            // timerRefreshOrdersList
+            // 
+            timerRefreshOrdersList.Interval = 1;
+            // 
             // textBox1
             // 
-            textBox1.Location = new Point(18, 3);
+            textBox1.BackColor = SystemColors.InactiveCaption;
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(20, 16);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(1031, 23);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.Text = "     | Date           | Table               | Guest                      | Order                                                                                                 | Ready to serve";
             // 
             // ViewOrders
             // 
@@ -65,6 +73,7 @@
         #endregion
 
         private CheckedListBox activeOrdersList;
+        private System.Windows.Forms.Timer timerRefreshOrdersList;
         private TextBox textBox1;
     }
 }
