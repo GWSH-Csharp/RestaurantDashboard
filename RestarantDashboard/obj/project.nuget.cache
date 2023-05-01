@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qWFaVCCeZDXEbVf0hnEVJvRlX5E91gqARPlZ0A2ppB4NF7Z/TfmIgcDXrk+lLuXYFTpqPHm1Lg0oO+4WMgRBKQ==",
+  "dgSpecHash": "L9P5CMpID/VKctq9039cr/JeQ2m7LVEA7FAKIe1II4FKVDCczO1QOwyPc03utAIpKGnqUjN4hkC7QKRtCIb5zQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
+  "projectFilePath": "C:\\Users\\piotr\\source\\repos\\KuchniaSala\\RestaurantDashboard\\RestarantDashboard\\RestarantDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\piotr\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
     "C:\\Users\\piotr\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
