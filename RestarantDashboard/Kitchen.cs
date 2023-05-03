@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Sheets.v4;
+using Microsoft.VisualBasic;
 
 namespace RestarantDashboard
 {
@@ -32,5 +33,10 @@ namespace RestarantDashboard
             viewOrders1.Show();
             viewOrders1.BringToFront();
         }
+
+        protected static void readyToServeBtn_Click(object sender, EventArgs e)
+        {
+        }
     }
+
 }

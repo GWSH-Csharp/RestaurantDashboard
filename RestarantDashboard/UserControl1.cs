@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Sheets.v4;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace RestarantDashboard
 {
@@ -17,7 +18,6 @@ namespace RestarantDashboard
     {
 
         List<string> rows = new List<string>();
-
 
         static readonly string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static readonly string ApplicationName = "RestaurantDashboard";
@@ -28,10 +28,10 @@ namespace RestarantDashboard
         public ViewOrders()
         {
             InitializeComponent();
+            RefreshList();
             timerRefreshOrdersList.Interval = 15000;
             timerRefreshOrdersList.Tick += TimerRefreshOrdersList_Tick;
             timerRefreshOrdersList.Start();
-            activeOrdersList.DrawMode = DrawMode.OwnerDrawFixed;
             activeOrdersList.CheckOnClick = true;
         }
 
@@ -45,7 +45,7 @@ namespace RestarantDashboard
             RefreshList();
         }
 
-        private void RefreshList()
+        protected void RefreshList()
         {
             GoogleCredential credential;
             using (var stream = new FileStream("C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\Client_Secret\\restaurantdashboard-384320-d450b5056d5f.json", FileMode.Open, FileAccess.Read))
@@ -60,31 +60,23 @@ namespace RestarantDashboard
                 ApplicationName = ApplicationName,
             });
 
-            List<string> rows = ReadEntries();
+            rows = ReadEntries();
+
+            var checkedItems = activeOrdersList.CheckedItems.OfType<string>().ToList();
 
             activeOrdersList.Items.Clear();
             activeOrdersList.Items.AddRange(rows.ToArray());
-        }
 
-        private void activeOrdersList_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            e.DrawBackground();
-
-            if (e.Index >= 0)
+            foreach (var item in checkedItems)
             {
-                string text = activeOrdersList.Items[e.Index].ToString();
-                bool isChecked = activeOrdersList.GetItemChecked(e.Index);
-                Rectangle checkboxRect = new Rectangle(e.Bounds.X + 3, e.Bounds.Y + 3, 14, 14);
-                ControlPaint.DrawCheckBox(e.Graphics, checkboxRect, isChecked ? ButtonState.Checked : ButtonState.Normal);
-                using (SolidBrush brush = new SolidBrush(e.ForeColor))
+                int index = activeOrdersList.Items.IndexOf(item);
+                if (index != -1)
                 {
-                    Rectangle textRect = new Rectangle(e.Bounds.X + checkboxRect.Width + 6, e.Bounds.Y, e.Bounds.Width - checkboxRect.Width - 6, e.Bounds.Height);
-                    e.Graphics.DrawString(text, e.Font, brush, textRect);
+                    activeOrdersList.SetItemChecked(index, true);
                 }
             }
-
-            e.DrawFocusRectangle();
         }
+
 
         static List<string> ReadEntries()
         {
@@ -109,5 +101,54 @@ namespace RestarantDashboard
                 return null;
             }
         }
+
+
+        private void readyToServeBtn_Click(object sender, EventArgs e)
+        {
+            var checkedItems = activeOrdersList.CheckedItems.OfType<string>().ToList();
+            var range = $"{sheet}!A2:F";
+
+            var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
+            var response = request.Execute();
+            var values = response.Values;
+
+            if (values == null || values.Count == 0)
+            {
+                Console.WriteLine("No data found.");
+                return;
+            }
+
+            var rangeToUpdate = new List<IList<object>>();
+
+            foreach (var checkedItem in checkedItems)
+            {
+                var rowIndex = rows.IndexOf(checkedItem) + 2;
+                var newValue = "Yes";
+                var oldValue = values[rowIndex - 2][5].ToString();
+
+                if (oldValue != newValue)
+                {
+                    rangeToUpdate.Add(new List<object>() { newValue });
+                }
+            }
+
+            if (rangeToUpdate.Count > 0)
+            {
+                var valueRange = new ValueRange { Values = rangeToUpdate };
+                var updateRange = $"{sheet}!F2:F{rangeToUpdate.Count + 1}";
+                var updateRequest = service.Spreadsheets.Values.Update(valueRange, SpreadsheetId, updateRange);
+                updateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
+                var updateResponse = updateRequest.Execute();
+            }
+            RefreshList();
+        }
+
+
+
+
+
+
+
+
     }
 }

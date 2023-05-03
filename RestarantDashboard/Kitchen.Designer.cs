@@ -30,7 +30,6 @@
         {
             viewOrders1 = new ViewOrders();
             viewOrdersBtn = new Button();
-            readyToServeBtn = new Button();
             SuspendLayout();
             // 
             // viewOrders1
@@ -51,21 +50,11 @@
             viewOrdersBtn.UseVisualStyleBackColor = true;
             viewOrdersBtn.Click += viewOrdersBtn_Click;
             // 
-            // readyToServeBtn
-            // 
-            readyToServeBtn.Location = new Point(690, 23);
-            readyToServeBtn.Name = "readyToServeBtn";
-            readyToServeBtn.Size = new Size(349, 82);
-            readyToServeBtn.TabIndex = 2;
-            readyToServeBtn.Text = "Ready to serve - Yes";
-            readyToServeBtn.UseVisualStyleBackColor = true;
-            // 
             // Kitchen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            Controls.Add(readyToServeBtn);
             Controls.Add(viewOrdersBtn);
             Controls.Add(viewOrders1);
             Name = "Kitchen";
@@ -77,6 +66,5 @@
 
         private ViewOrders viewOrders1;
         private Button viewOrdersBtn;
-        private Button readyToServeBtn;
     }
 }
