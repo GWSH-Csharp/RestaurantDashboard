@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             orders_list_view = new ListView();
+            columnHeader1 = new ColumnHeader();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             orderds_main_list_title = new RichTextBox();
             new_order_button = new Button();
-            columnHeader1 = new ColumnHeader();
+            orders_view = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -46,6 +47,12 @@
             orders_list_view.Size = new Size(238, 450);
             orders_list_view.TabIndex = 0;
             orders_list_view.UseCompatibleStateImageBehavior = false;
+            orders_list_view.View = View.Tile;
+            orders_list_view.Click += orders_list_view_on_click;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Width = 0;
             // 
             // button1
             // 
@@ -90,15 +97,20 @@
             new_order_button.UseVisualStyleBackColor = true;
             new_order_button.Click += new_order_button_Click;
             // 
-            // columnHeader1
+            // orders_view
             // 
-            columnHeader1.Width = -1;
+            orders_view.Location = new Point(256, 185);
+            orders_view.Name = "orders_view";
+            orders_view.Size = new Size(462, 381);
+            orders_view.TabIndex = 5;
+            orders_view.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1127, 647);
+            Controls.Add(orders_view);
             Controls.Add(new_order_button);
             Controls.Add(orderds_main_list_title);
             Controls.Add(pictureBox1);
@@ -118,5 +130,6 @@
         private RichTextBox orderds_main_list_title;
         private Button new_order_button;
         private ColumnHeader columnHeader1;
+        private RichTextBox orders_view;
     }
 }

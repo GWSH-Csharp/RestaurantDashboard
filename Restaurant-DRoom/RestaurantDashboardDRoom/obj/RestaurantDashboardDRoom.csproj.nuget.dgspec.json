@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\fafa194\\CSharp_Kuchnia_Sala\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj": {}
+    "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj": {}
   },
   "projects": {
-    "C:\\fafa194\\CSharp_Kuchnia_Sala\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj": {
+    "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fafa194\\CSharp_Kuchnia_Sala\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj",
+        "projectUniqueName": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj",
         "projectName": "RestaurantDashboardDRoom",
-        "projectPath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj",
+        "projectPath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj",
         "packagesPath": "C:\\Users\\fafa1\\.nuget\\packages\\",
-        "outputPath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\Restaurant-DRoom\\RestaurantDashboardDRoom\\obj\\",
+        "outputPath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\Restaurant-DRoom\\RestaurantDashboardDRoom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fafa1\\AppData\\Roaming\\NuGet\\NuGet.Config",
