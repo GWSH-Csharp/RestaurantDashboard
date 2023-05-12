@@ -12,6 +12,7 @@ namespace RestaurantDashboardDRoom
             public DateTime OrderDate { get; set; }
             public int TableID { get; set; }
             public double Bill { get; set; }
+            public Pracownik Staff { get; set; }
             public string ShortDescription { get { return $"ID: {ID},  Table: {TableID}, Date: {OrderDate}, Bill: {Bill}"; } }
 
             // Each menu position definition

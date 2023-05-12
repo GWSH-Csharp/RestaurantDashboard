@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            submit_button = new Button();
             tableLabel = new Label();
             tableListCombox = new ComboBox();
             label1 = new Label();
@@ -39,16 +39,20 @@
             menu_category_view = new ListView();
             category_menu_label = new Label();
             actual_order_label = new Label();
+            add_button = new Button();
+            remove_button = new Button();
             SuspendLayout();
             // 
-            // button1
+            // submit_button
             // 
-            button1.Location = new Point(12, 374);
-            button1.Name = "button1";
-            button1.Size = new Size(225, 64);
-            button1.TabIndex = 0;
-            button1.Text = "Submit";
-            button1.UseVisualStyleBackColor = true;
+            submit_button.Enabled = false;
+            submit_button.Location = new Point(12, 374);
+            submit_button.Name = "submit_button";
+            submit_button.Size = new Size(225, 64);
+            submit_button.TabIndex = 0;
+            submit_button.Text = "Submit";
+            submit_button.UseVisualStyleBackColor = true;
+            submit_button.Click += submit_button_Click;
             // 
             // tableLabel
             // 
@@ -114,6 +118,7 @@
             actual_order.Size = new Size(236, 404);
             actual_order.TabIndex = 7;
             actual_order.UseCompatibleStateImageBehavior = false;
+            actual_order.View = View.List;
             // 
             // menu_category_view
             // 
@@ -141,6 +146,25 @@
             actual_order_label.TabIndex = 5;
             actual_order_label.Text = "Order";
             // 
+            // add_button
+            // 
+            add_button.Location = new Point(485, 149);
+            add_button.Name = "add_button";
+            add_button.Size = new Size(61, 64);
+            add_button.TabIndex = 0;
+            add_button.Text = "Add";
+            add_button.UseVisualStyleBackColor = true;
+            add_button.Click += add_button_Click_1;
+            // 
+            // remove_button
+            // 
+            remove_button.Location = new Point(485, 219);
+            remove_button.Name = "remove_button";
+            remove_button.Size = new Size(61, 64);
+            remove_button.TabIndex = 0;
+            remove_button.Text = "Remove";
+            remove_button.UseVisualStyleBackColor = true;
+            // 
             // NewForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -156,7 +180,9 @@
             Controls.Add(menu_combox);
             Controls.Add(tableListCombox);
             Controls.Add(tableLabel);
-            Controls.Add(button1);
+            Controls.Add(remove_button);
+            Controls.Add(add_button);
+            Controls.Add(submit_button);
             Name = "NewForm";
             Text = "New order";
             ResumeLayout(false);
@@ -165,7 +191,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button submit_button;
         private Label tableLabel;
         private ComboBox tableListCombox;
         private Label label1;
@@ -176,5 +202,7 @@
         private ListView menu_category_view;
         private Label category_menu_label;
         private Label actual_order_label;
+        private Button add_button;
+        private Button remove_button;
     }
 }
