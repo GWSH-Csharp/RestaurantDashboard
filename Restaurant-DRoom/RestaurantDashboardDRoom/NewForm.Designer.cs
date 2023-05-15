@@ -154,7 +154,7 @@
             add_button.TabIndex = 0;
             add_button.Text = "Add";
             add_button.UseVisualStyleBackColor = true;
-            add_button.Click += add_button_Click_1;
+            add_button.Click += add_button_Click;
             // 
             // remove_button
             // 
@@ -164,6 +164,7 @@
             remove_button.TabIndex = 0;
             remove_button.Text = "Remove";
             remove_button.UseVisualStyleBackColor = true;
+            remove_button.Click += remove_button_Click;
             // 
             // NewForm
             // 

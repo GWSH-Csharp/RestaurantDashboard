@@ -1,6 +1,4 @@
-﻿using System.Collections.Specialized;
-using System.Diagnostics.Eventing.Reader;
-using static RestaurantDashboardDRoom.Program;
+﻿using static RestaurantDashboardDRoom.Program;
 using static RestaurantDashboardDRoom.Program.Order;
 
 namespace RestaurantDashboardDRoom
@@ -9,6 +7,17 @@ namespace RestaurantDashboardDRoom
     {
         Database db = new Database();
         Order order = new Order();
+
+        MenuPosition menuPosition = new MenuPosition();
+        List<MenuPosition> menuPositions = new List<MenuPosition>();
+
+        string selectedTable, selectedEmployee;
+        // Add the return MenuPosition object to the list of menu positions
+        void addMenuPositionToList()
+        {
+            menuPositions.Add(menuPosition);
+        }
+
         public NewForm()
         {
             InitializeComponent();
@@ -19,15 +28,18 @@ namespace RestaurantDashboardDRoom
             // Menu database started 
             List<MenuPosition> all_menu_positions = db.przystawki.Concat(db.drugie).Concat(db.desery).Concat(db.napoje).ToList();
 
+
             // Function adding users to combo box list
             void addUsersToComboBox()
             {
                 foreach (Pracownik pracownik in pracownicy)
                 {
-                    userListCombox.Items.Add($"{pracownik.Imie} {pracownik.Nazwisko} ({pracownik.Stanowisko})");
+                    userListCombox.Items.Add($"{pracownik.Id} {pracownik.Imie} {pracownik.Nazwisko} ({pracownik.Stanowisko})");
                 }
             }
             addUsersToComboBox();
+
+
 
             // Adding tables number to combobox (10 is the testing number)
             void addTableNumbers()
@@ -37,6 +49,7 @@ namespace RestaurantDashboardDRoom
                     tableListCombox.Items.Add(i);
                 }
             }
+
             addTableNumbers();
 
             // Menu positions adding to chose combox 
@@ -51,23 +64,41 @@ namespace RestaurantDashboardDRoom
             addMenuPositions();
         }
 
-        string selectedTable, selectedEmployee;
-
-        // Chosing user 
-        void userListCombox_SelectedIndexChanged(object sender, EventArgs e)
+        int returnSelectedTableID()
         {
-            selectedEmployee = userListCombox.SelectedItem.ToString();
-        }
-
-        // Chosing table
-        void tableListCombox_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            // Get the selected table from the ComboBox 
             selectedTable = tableListCombox.SelectedItem.ToString();
+
+            // Convert the selected table to an integer and assign it to the Order object
+            int tableIdToInt = int.Parse(selectedTable);
+
+            return tableIdToInt;
         }
 
+        int returnSelectedUserID()
+        {
 
-        // Chosing menu 
-        void menu_chose_combox_SelectedIndexChanged(object sender, EventArgs e)
+            selectedEmployee = userListCombox.SelectedItem.ToString();
+
+            // Convert the selected employee to an integer and assign it to the Order object
+            int selectedEmployeId = int.Parse(selectedEmployee.Split(' ')[0]);
+
+            return selectedEmployeId;
+
+        }
+
+        void removeTheSelectedItemFromListView()
+        {
+            // Remove the selected item from the ListView control
+            if (actual_order.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = actual_order.SelectedItems[0];
+                actual_order.Items.Remove(selectedItem);
+            }
+
+        }
+
+        void addPositionToCategoryViewList()
         {
             // Get the selected category from the ComboBox
             string selectedCategory = menu_chose_combox.SelectedItem.ToString();
@@ -75,6 +106,7 @@ namespace RestaurantDashboardDRoom
             // Get the corresponding list of MenuPositions based on the selected category
             List<MenuPosition> selectedMenuPositions = null;
 
+            // Assign the selected list of MenuPositions to the ListView control
             switch (selectedCategory)
             {
                 case "Przystawki":
@@ -99,7 +131,6 @@ namespace RestaurantDashboardDRoom
             // Filter the selected list of MenuPositions based on the "Kategoria" property
             List<MenuPosition> filteredMenuPositions = selectedMenuPositions.Where(mp => mp.Kategoria == selectedCategory).ToList();
 
-
             // Add the filtered MenuPositions to the ListView control
             foreach (MenuPosition mp in filteredMenuPositions)
             {
@@ -110,35 +141,84 @@ namespace RestaurantDashboardDRoom
 
         }
 
-        // Add button to order 
-        void add_button_Click_1(object sender, EventArgs e)
+        MenuPosition returnSelectedMenuPosition()
         {
+            // Checking if all the values are selected
             if (menu_category_view.SelectedItems.Count > 0 && selectedTable != null && selectedEmployee != null)
             {
+                // Enable the "Submit" button and disable the ComboBoxes
+                submit_button.Enabled = true;
+                tableListCombox.Enabled = false;
+                userListCombox.Enabled = false;
+
                 // Get the selected item
                 ListViewItem selectedItem = menu_category_view.SelectedItems[0];
 
-                // Access the data of the selected item
-                string itemName = selectedItem.Text;
-                // string itemPrice = selectedItem.SubItems[1].Text;
+                // As MenuPosition object
+                menuPosition = selectedItem.Tag as MenuPosition;
 
-                // Perform your desired action using the selected item's data
-                // Example: Display the selected item's details in a message box
-                // MessageBox.Show($"Selected Item: {itemName}\nPrice: {itemPrice}");
-                tableListCombox.Enabled = false;
-                userListCombox.Enabled = false;
+                // Print the selected item in list view 
+                string itemName = selectedItem.Text;
                 actual_order.Items.Add(itemName);
+
+                return menuPosition;
+
             }
             else
             {
                 // No item is selected
-                MessageBox.Show("Missing data!");
+                MessageBox.Show($"Missing data!");
+                return null;
             }
+
+        }
+
+        // Chosing user 
+        void userListCombox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            returnSelectedUserID();
+            // order.Staff = db.pracownicy.Where(p => p.Id == selectedEmployeId).FirstOrDefault();
+
+        }
+
+        // Chosing table
+        void tableListCombox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            returnSelectedTableID();
+        }
+
+
+        // Chosing menu 
+        void menu_chose_combox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            addPositionToCategoryViewList();
+        }
+
+
+        // Add button to order 
+        void add_button_Click(object sender, EventArgs e)
+        {
+            if (menuPosition != null)
+            {
+                menuPositions.Add(returnSelectedMenuPosition());
+            }
+        }
+
+        private void remove_button_Click(object sender, EventArgs e)
+        {
+            removeTheSelectedItemFromListView();
         }
 
         private void submit_button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Added order!");
+            order.OrderMenu = menuPositions;
+            order.TableID = returnSelectedTableID();
+            order.Staff = db.pracownicy.Where(p => p.Id == returnSelectedUserID()).FirstOrDefault();
+            
+            // Further actions required
+            MessageBox.Show($"{order.OrderMenu.ToString}");
+
         }
+
     }
 }

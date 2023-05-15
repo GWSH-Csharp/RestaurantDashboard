@@ -47,55 +47,51 @@ namespace RestaurantDashboardDRoom
                 new Pracownik { Id = 6, Imie = "Adam", Nazwisko = "Kowalczyk", Dzial = "SALA", Stanowisko = "Kelner" }
             };
 
-            public List<MenuPosition> przystawki = new List<MenuPosition>
+        public  List<MenuPosition> przystawki = new List<MenuPosition>
             {
-                new MenuPosition { Id = 1, Pozycja = 1, Kategoria = "Przystawki", Nazwa = "Sa³atka grecka", Cena = 10.50 },
-                new MenuPosition { Id = 2, Pozycja = 2, Kategoria = "Przystawki", Nazwa = "Krewetki koktajlowe", Cena = 19.50 },
-                new MenuPosition { Id = 3, Pozycja = 3, Kategoria = "Przystawki", Nazwa = "Tatar wo³owy", Cena = 17.00 },
+                new MenuPosition { Pozycja = 1, Kategoria = "Przystawki", Nazwa = "Sa³atka grecka", Cena = 10.50 },
+                new MenuPosition { Pozycja = 2, Kategoria = "Przystawki", Nazwa = "Krewetki koktajlowe", Cena = 19.50 },
+                new MenuPosition { Pozycja = 3, Kategoria = "Przystawki", Nazwa = "Tatar wo³owy", Cena = 17.00 },
                 // Dodaj pozosta³e przystawki
             };
 
-            public List<MenuPosition> drugie = new List<MenuPosition>
+        public  List<MenuPosition> drugie = new List<MenuPosition>
             {
-                new MenuPosition { Id = 9, Pozycja = 1, Kategoria = "Drugie", Nazwa = "Schabowy z ziemniakami i kapust¹", Cena = 22.00 },
-                new MenuPosition { Id = 10, Pozycja = 2, Kategoria = "Drugie", Nazwa = "Gulasz z jagniêciny", Cena = 27.50 },
-                new MenuPosition { Id = 11, Pozycja = 3, Kategoria = "Drugie", Nazwa = "Kotlet de volaille", Cena = 20.00 },
+                new MenuPosition { Pozycja = 1, Kategoria = "Drugie", Nazwa = "Schabowy z ziemniakami i kapust¹", Cena = 22.00 },
+                new MenuPosition { Pozycja = 2, Kategoria = "Drugie", Nazwa = "Gulasz z jagniêciny", Cena = 27.50 },
+                new MenuPosition { Pozycja = 3, Kategoria = "Drugie", Nazwa = "Kotlet de volaille", Cena = 20.00 },
                 // Dodaj pozosta³e drugie
             };
 
-            public List<MenuPosition> desery = new List<MenuPosition>
+        public  List<MenuPosition> desery = new List<MenuPosition>
             {
-                new MenuPosition { Id = 17, Pozycja = 1, Kategoria = "Desery", Nazwa = "Tarta cytrynowa", Cena = 12.00 },
-                new MenuPosition { Id = 18, Pozycja = 2, Kategoria = "Desery", Nazwa = "Sernik na zimno", Cena = 14.50 },
-                new MenuPosition { Id = 19, Pozycja = 3, Kategoria = "Desery", Nazwa = "Truskawki w bitwie œmietanie", Cena = 10.00 },
+                new MenuPosition { Pozycja = 1, Kategoria = "Desery", Nazwa = "Tarta cytrynowa", Cena = 12.00 },
+                new MenuPosition { Pozycja = 2, Kategoria = "Desery", Nazwa = "Sernik na zimno", Cena = 14.50 },
+                new MenuPosition { Pozycja = 3, Kategoria = "Desery", Nazwa = "Truskawki w bitwie œmietanie", Cena = 10.00 },
                 // Dodaj pozosta³e desery
             };
 
-            public List<MenuPosition> napoje = new List<MenuPosition>
+        public List<MenuPosition> napoje = new List<MenuPosition>
             {
-                new MenuPosition { Id = 25, Pozycja = 1, Kategoria = "Napoje", Nazwa = "Kawa czarna", Cena = 7.00 },
-                new MenuPosition { Id = 26, Pozycja = 2, Kategoria = "Napoje", Nazwa = "Herbata", Cena = 6.50 },
-                new MenuPosition { Id = 27, Pozycja = 3, Kategoria = "Napoje", Nazwa = "Sok pomarañczowy", Cena = 8.50 },
+                new MenuPosition { Pozycja = 1, Kategoria = "Napoje", Nazwa = "Kawa czarna", Cena = 7.00 },
+                new MenuPosition { Pozycja = 2, Kategoria = "Napoje", Nazwa = "Herbata", Cena = 6.50 },
+                new MenuPosition { Pozycja = 3, Kategoria = "Napoje", Nazwa = "Sok pomarañczowy", Cena = 8.50 },
                 // Dodaj pozosta³e napoje
             };
-
-        }
-
-
-
-
+        };
 
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-
-        static void Main()
+        private static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
         }
     }
+
 }
