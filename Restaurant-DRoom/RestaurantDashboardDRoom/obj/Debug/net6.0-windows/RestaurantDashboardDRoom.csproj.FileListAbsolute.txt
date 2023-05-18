@@ -35,3 +35,10 @@ C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDa
 C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.genruntimeconfig.cache
 C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\ref\RestaurantDashboardDRoom.dll
 C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.NewForm.resources
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CopyComplete

@@ -155,6 +155,7 @@
             add_button.Text = "Add";
             add_button.UseVisualStyleBackColor = true;
             add_button.Click += add_button_Click;
+
             // 
             // remove_button
             // 

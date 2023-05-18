@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "sC/bQBwqTePKrLTtbGkWi1xOk6E9sSOu+aE/NfVF62RyzoOHZSU66kWsF6ljY9PLFQgYar8o3J6RQEFGm+k3tQ==",
+  "dgSpecHash": "mHhEFOdbiRn6X5OAUOzRRJWNvwQVHjo8N6YMeWnestp7FUVK/eocHI4KoWRH/nSVXRsNu8MtWbfWb5mQgq4XFg==",
   "success": true,
   "projectFilePath": "C:\\fafa194\\CSharp_Kuchnia_Sala\\RestaurantDashboard\\Restaurant-DRoom\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\google.apis.sheets.v4\\1.60.0.2979\\google.apis.sheets.v4.1.60.0.2979.nupkg.sha512",
+    "C:\\Users\\fafa1\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

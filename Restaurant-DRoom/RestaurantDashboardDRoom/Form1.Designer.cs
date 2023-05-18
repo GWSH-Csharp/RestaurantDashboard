@@ -28,40 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            orders_list_view = new ListView();
-            columnHeader1 = new ColumnHeader();
-            button1 = new Button();
             pictureBox1 = new PictureBox();
-            orderds_main_list_title = new RichTextBox();
             new_order_button = new Button();
-            orders_view = new RichTextBox();
+            date_time_main = new Label();
+            view_orders_button = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            timer_now = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // orders_list_view
-            // 
-            orders_list_view.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
-            orders_list_view.Location = new Point(12, 185);
-            orders_list_view.Name = "orders_list_view";
-            orders_list_view.Size = new Size(238, 450);
-            orders_list_view.TabIndex = 0;
-            orders_list_view.UseCompatibleStateImageBehavior = false;
-            orders_list_view.View = View.Tile;
-            orders_list_view.Click += orders_list_view_on_click;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Width = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(256, 572);
-            button1.Name = "button1";
-            button1.Size = new Size(228, 63);
-            button1.TabIndex = 1;
-            button1.Text = "Select";
-            button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -73,23 +58,9 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // orderds_main_list_title
-            // 
-            orderds_main_list_title.BackColor = SystemColors.ButtonFace;
-            orderds_main_list_title.BorderStyle = BorderStyle.None;
-            orderds_main_list_title.Font = new Font("Ebrima", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            orderds_main_list_title.ForeColor = SystemColors.WindowText;
-            orderds_main_list_title.Location = new Point(12, 153);
-            orderds_main_list_title.Name = "orderds_main_list_title";
-            orderds_main_list_title.ReadOnly = true;
-            orderds_main_list_title.ScrollBars = RichTextBoxScrollBars.None;
-            orderds_main_list_title.Size = new Size(238, 26);
-            orderds_main_list_title.TabIndex = 3;
-            orderds_main_list_title.Text = "Orders List";
-            // 
             // new_order_button
             // 
-            new_order_button.Location = new Point(490, 572);
+            new_order_button.Location = new Point(13, 505);
             new_order_button.Name = "new_order_button";
             new_order_button.Size = new Size(228, 63);
             new_order_button.TabIndex = 4;
@@ -97,39 +68,130 @@
             new_order_button.UseVisualStyleBackColor = true;
             new_order_button.Click += new_order_button_Click;
             // 
-            // orders_view
+            // date_time_main
             // 
-            orders_view.Location = new Point(256, 185);
-            orders_view.Name = "orders_view";
-            orders_view.Size = new Size(462, 381);
-            orders_view.TabIndex = 5;
-            orders_view.Text = "";
+            date_time_main.AutoSize = true;
+            date_time_main.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            date_time_main.Location = new Point(13, 171);
+            date_time_main.Name = "date_time_main";
+            date_time_main.Size = new Size(118, 37);
+            date_time_main.TabIndex = 5;
+            date_time_main.Text = "TheTime";
+            // 
+            // view_orders_button
+            // 
+            view_orders_button.Location = new Point(13, 436);
+            view_orders_button.Name = "view_orders_button";
+            view_orders_button.Size = new Size(228, 63);
+            view_orders_button.TabIndex = 4;
+            view_orders_button.Text = "View Orders";
+            view_orders_button.UseVisualStyleBackColor = true;
+            view_orders_button.Click += view_orders_api_button;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(333, 588);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(8, 8);
+            flowLayoutPanel1.TabIndex = 6;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            dataGridView1.Location = new Point(247, 155);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(847, 413);
+            dataGridView1.TabIndex = 7;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.FillWeight = 10.3918686F;
+            Column1.HeaderText = "Column1";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column2.FillWeight = 41.3482552F;
+            Column2.HeaderText = "Column2";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column3.FillWeight = 17.333025F;
+            Column3.HeaderText = "Column3";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column4.FillWeight = 65.8709259F;
+            Column4.HeaderText = "Column4";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column5.FillWeight = 20.64853F;
+            Column5.HeaderText = "Column5";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column6.FillWeight = 44.6981163F;
+            Column6.HeaderText = "Column6";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Column7";
+            Column7.Name = "Column7";
+            // 
+            // timer_now
+            // 
+            timer_now.Enabled = true;
+            timer_now.Interval = 1000;
+            timer_now.Tick += Timer_now_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1127, 647);
-            Controls.Add(orders_view);
+            ClientSize = new Size(1106, 580);
+            Controls.Add(dataGridView1);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(date_time_main);
+            Controls.Add(view_orders_button);
             Controls.Add(new_order_button);
-            Controls.Add(orderds_main_list_title);
             Controls.Add(pictureBox1);
-            Controls.Add(button1);
-            Controls.Add(orders_list_view);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private ListView orders_list_view;
-        private Button button1;
         private PictureBox pictureBox1;
-        private RichTextBox orderds_main_list_title;
         private Button new_order_button;
-        private ColumnHeader columnHeader1;
-        private RichTextBox orders_view;
+        private Label date_time_main;
+        private Button view_orders_button;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private DataGridView dataGridView1;
+        private System.Windows.Forms.Timer timer_now;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
     }
 }
