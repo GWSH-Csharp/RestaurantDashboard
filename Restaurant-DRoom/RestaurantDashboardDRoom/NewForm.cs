@@ -171,7 +171,7 @@ namespace RestaurantDashboardDRoom
 
         }
 
-
+        // Adding the selected item to the listview
         void addPositionToOrderViewList()
         {
             List<MenuPosition> all_menu_positions = db.przystawki.Concat(db.drugie).Concat(db.desery).Concat(db.napoje).ToList();
@@ -221,13 +221,11 @@ namespace RestaurantDashboardDRoom
             returnSelectedTableID();
         }
 
-
         // Chosing menu 
         void menu_chose_combox_SelectedIndexChanged(object sender, EventArgs e)
         {
             addPositionToCategoryViewList();
         }
-
 
         // Adding menu positions to view list on click "ADD"
         void add_button_Click(object sender, EventArgs e)
@@ -251,14 +249,17 @@ namespace RestaurantDashboardDRoom
             order.Bill = returnTheBillTotal();
 
             // Pop up summary 
-            MessageBox.Show($"{order.OrderDate} \n {order.Staff.Imie} {order.Staff.Nazwisko} \n {order.TableID} \n {menuPositionsString}");
+            MessageBox.Show($"{order.OrderDate} \n {order.Staff.Imie} {order.Staff.Nazwisko} \n {order.TableID}");
 
             // Return the order object to the main form
             Form1 form1 = (Form1)Application.OpenForms["Form1"];
             if (form1 != null)
             {
+                apiSheetsRead apiSheetsRead = new apiSheetsRead();
                 apiSheetsRead.order = order;
                 DataGridView dataGridView1 = form1.dataGridView1;
+
+                // Refresh the entries in the DataGridView control and then append the new entry
                 apiSheetsRead.readEntries("Arkusz1", dataGridView1);
                 apiSheetsRead.createEntries("Arkusz1");
                 apiSheetsRead.readEntries("Arkusz1", dataGridView1);

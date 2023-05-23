@@ -43,14 +43,17 @@ namespace RestaurantDashboardDRoom
 
         public class apiSheetsRead
         {
-
+            DataGridView dataGridView1 = new DataGridView();
+            int orderIdInt;
             internal static Order order { get; set; }
-            public static void readEntries(string sheet, DataGridView dataGridView1)
+            public void readEntries(string sheet, DataGridView dataGridView1)
             {
                 var range = $"{sheet}!A:Z";
                 var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
                 var response = request.Execute();
                 var values = response.Values;
+
+                orderIdInt = dataGridView1.Rows.Count;
 
                 void clearBeforeYouGoAndAddHeaders()
                 {
@@ -86,18 +89,18 @@ namespace RestaurantDashboardDRoom
                 addTheRowsAfterHeaders();
             }
 
-            public static void createEntries(string sheet)
-            {
+            public void createEntries(string sheet)
+            { 
                 // Order objects to string
                 string orderString = "";
                 string orderStringMenu = "";
 
+                order.ID = orderIdInt;
                 // Order.OrderDate only with hours and minutes
                 string orderDateHHmmToString = order.OrderDate.ToString("HH:mm");
 
                 // Order.tableID to string
                 string orderTableIDToString = order.TableID.ToString();
-
 
                 // Creating a string from the order object
                 void getOrderMenuAndMakeItString()
@@ -113,6 +116,7 @@ namespace RestaurantDashboardDRoom
                 }
                 getOrderMenuAndMakeItString();
 
+                // Access to the google sheets necessary variables
                 var range = $"{sheet}!A:Z";
                 var valueRange = new ValueRange();
                 var objectList = new List<object>() { order.ID, orderDateHHmmToString, orderTableIDToString, orderStringMenu, $"{order.Bill} z³", $"{order.Staff.Imie} {order.Staff.Nazwisko}", "STATUS" };
@@ -120,7 +124,6 @@ namespace RestaurantDashboardDRoom
                 var appendRequest = service.Spreadsheets.Values.Append(valueRange, SpreadsheetId, range);
                 appendRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
                 var appendReponse = appendRequest.Execute();
-
             }
         }
 
@@ -146,6 +149,7 @@ namespace RestaurantDashboardDRoom
 
         void view_orders_api_button(object sender, EventArgs e)
         {
+            apiSheetsRead apiSheetsRead = new apiSheetsRead();
             apiSheetsRead.readEntries("Arkusz1", dataGridView1);
         }
 
