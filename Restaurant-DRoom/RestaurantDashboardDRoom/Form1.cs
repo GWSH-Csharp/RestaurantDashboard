@@ -1,5 +1,8 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4;
+using Google.Apis.Sheets.v4.Data;
+using static RestaurantDashboardDRoom.Program;
+using static RestaurantDashboardDRoom.Program.Order;
 
 namespace RestaurantDashboardDRoom
 {
@@ -8,14 +11,20 @@ namespace RestaurantDashboardDRoom
         // Global variables
         DateTime date_now = DateTime.Now;
 
+
+
         // Google Api Spreadsheet global variables
         static readonly string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static readonly string ApplicationName = "ApplicationName";
         static readonly string SpreadsheetId = "1LTfSmD9ew3rT23FL7Ffw2t92mJlhG-Ept-AR0QE0_1U";
 
         static SheetsService service;
+
+
+
         public Form1()
         {
+
             InitializeComponent();
 
             // Google api new instance, starting connection
@@ -32,56 +41,36 @@ namespace RestaurantDashboardDRoom
             });
         }
 
-        public static class apiSheetsRead
+        public class apiSheetsRead
         {
-            public static void ReadEntries(string sheet, DataGridView dataGridView1)
+
+            internal static Order order { get; set; }
+            public static void readEntries(string sheet, DataGridView dataGridView1)
             {
-                int indexColumn = 0;
-                var range = $"{sheet}!A1:D30";
+                var range = $"{sheet}!A:Z";
                 var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
                 var response = request.Execute();
                 var values = response.Values;
-                
-                void clearBeforeYouGo()
+
+                void clearBeforeYouGoAndAddHeaders()
                 {
                     // Clear the datagridview before you add the new data
                     dataGridView1.Rows.Clear();
                     dataGridView1.Columns.Clear();
-                    dataGridView1.Columns.Add("Column1", "Header1");
-                    dataGridView1.Columns.Add("Column2", "Header2");
-                    dataGridView1.Columns.Add("Column3", "Header3");
-                    dataGridView1.Columns.Add("Column4", "Header4");
-                    dataGridView1.Columns.Add("Column5", "Header5");
-                    dataGridView1.Columns.Add("Column6", "Header6");
-                    dataGridView1.Columns.Add("Column7", "Header7");
-
-                }
-                void addTheHeaders()
-                {
-                    // Add the header row from the spreadsheet to the datagridview
-                    if (values != null && values.Count > 0)
-                    {
-                        var headerRow = values[0];
-                        foreach (var cellValue in headerRow)
-                        {
-                            if (indexColumn < dataGridView1.Columns.Count)
-                            {
-                                dataGridView1.Columns[indexColumn].HeaderText = cellValue?.ToString();
-                            }
-                            indexColumn++;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Unable to read data");
-                    }
+                    dataGridView1.Columns.Add("ID", "ID");
+                    dataGridView1.Columns.Add("TIME", "TIME");
+                    dataGridView1.Columns.Add("TABLE", "TABLE");
+                    dataGridView1.Columns.Add("ORDER_MENU", "ORDER_MENU");
+                    dataGridView1.Columns.Add("BILL", "BILL");
+                    dataGridView1.Columns.Add("STAFF", "STAFF");
+                    dataGridView1.Columns.Add("STATUS", "STATUS");
                 }
                 void addTheRowsAfterHeaders()
                 {
                     // Add the rows from the spreadsheet to the datagridview
                     if (values != null && values.Count > 0)
                     {
-                        for (int i = 1; i < values.Count; i++)
+                        for (int i = 0; i < values.Count; i++)
                         {
                             var row = values[i];
                             dataGridView1.Rows.Add(row.ToArray());
@@ -89,12 +78,49 @@ namespace RestaurantDashboardDRoom
                     }
                     else
                     {
-                        MessageBox.Show("Unable to read data");
+                        MessageBox.Show("No data available.");
                     }
                 }
-                clearBeforeYouGo();
-                addTheHeaders();
+
+                clearBeforeYouGoAndAddHeaders();
                 addTheRowsAfterHeaders();
+            }
+
+            public static void createEntries(string sheet)
+            {
+                // Order objects to string
+                string orderString = "";
+                string orderStringMenu = "";
+
+                // Order.OrderDate only with hours and minutes
+                string orderDateHHmmToString = order.OrderDate.ToString("HH:mm");
+
+                // Order.tableID to string
+                string orderTableIDToString = order.TableID.ToString();
+
+
+                // Creating a string from the order object
+                void getOrderMenuAndMakeItString()
+                {
+                    foreach (var item in order.OrderMenu)
+                    {
+                        orderStringMenu += $"- {item.Nazwa} ({item.Cena} z³)\n";
+                        // Sum the bill
+                    }
+                    orderString += $"------------------------\n";
+                    orderString += $"Short description: {order.ShortDescription}\n";
+                    orderString += $"------------------------\n";
+                }
+                getOrderMenuAndMakeItString();
+
+                var range = $"{sheet}!A:Z";
+                var valueRange = new ValueRange();
+                var objectList = new List<object>() { order.ID, orderDateHHmmToString, orderTableIDToString, orderStringMenu, $"{order.Bill} z³", $"{order.Staff.Imie} {order.Staff.Nazwisko}", "STATUS" };
+                valueRange.Values = new List<IList<object>> { objectList };
+                var appendRequest = service.Spreadsheets.Values.Append(valueRange, SpreadsheetId, range);
+                appendRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
+                var appendReponse = appendRequest.Execute();
+
             }
         }
 
@@ -120,7 +146,7 @@ namespace RestaurantDashboardDRoom
 
         void view_orders_api_button(object sender, EventArgs e)
         {
-            apiSheetsRead.ReadEntries("Arkusz1", dataGridView1);
+            apiSheetsRead.readEntries("Arkusz1", dataGridView1);
         }
 
     }

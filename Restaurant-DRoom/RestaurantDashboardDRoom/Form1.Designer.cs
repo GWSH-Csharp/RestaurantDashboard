@@ -99,10 +99,10 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            dataGridView1.Location = new Point(247, 155);
+            dataGridView1.Location = new Point(352, 155);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(847, 413);
+            dataGridView1.Size = new Size(742, 413);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -184,7 +184,6 @@
         private Label date_time_main;
         private Button view_orders_button;
         private FlowLayoutPanel flowLayoutPanel1;
-        private DataGridView dataGridView1;
         private System.Windows.Forms.Timer timer_now;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
@@ -193,5 +192,6 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
+        public DataGridView dataGridView1;
     }
 }
