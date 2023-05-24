@@ -11,6 +11,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Sheets.v4;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Net;
 
 namespace RestarantDashboard
 {
@@ -42,15 +43,21 @@ namespace RestarantDashboard
 
         private void activeOrdersList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RefreshList();
+        //    RefreshList();
         }
 
         protected void RefreshList()
         {
             GoogleCredential credential;
-            using (var stream = new FileStream("C:\\Users\\piotr\\source\\repos\\RestarantDashboard\\Client_Secret\\restaurantdashboard-384320-d450b5056d5f.json", FileMode.Open, FileAccess.Read))
+
+
+            var jsonFileUrl = "https://drive.google.com/uc?export=download&id=1J8CVG7sHzclNV8RhU_onzxrvQHY1ep53";
+
+
+            using (var client = new WebClient())
             {
-                credential = GoogleCredential.FromStream(stream)
+                var json = client.DownloadString(jsonFileUrl);
+                credential = GoogleCredential.FromJson(json)
                     .CreateScoped(Scopes);
             }
 
@@ -140,15 +147,9 @@ namespace RestarantDashboard
                 updateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
                 var updateResponse = updateRequest.Execute();
             }
+            activeOrdersList.ClearSelected();
+            checkedItems.Clear();
             RefreshList();
         }
-
-
-
-
-
-
-
-
     }
 }
