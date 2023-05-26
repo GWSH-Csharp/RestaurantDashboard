@@ -247,6 +247,7 @@ namespace RestaurantDashboardDRoom
             order.OrderDate = DateTime.Now;
             order.OrderMenu = menuPositions;
             order.Bill = returnTheBillTotal();
+            order.Status = "OPEN";
 
             // Pop up summary 
             MessageBox.Show($"{order.OrderDate} \n {order.Staff.Imie} {order.Staff.Nazwisko} \n {order.TableID}");

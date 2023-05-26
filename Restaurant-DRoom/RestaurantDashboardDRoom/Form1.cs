@@ -90,7 +90,7 @@ namespace RestaurantDashboardDRoom
             }
 
             public void createEntries(string sheet)
-            { 
+            {
                 // Order objects to string
                 string orderString = "";
                 string orderStringMenu = "";
@@ -119,7 +119,7 @@ namespace RestaurantDashboardDRoom
                 // Access to the google sheets necessary variables
                 var range = $"{sheet}!A:Z";
                 var valueRange = new ValueRange();
-                var objectList = new List<object>() { order.ID, orderDateHHmmToString, orderTableIDToString, orderStringMenu, $"{order.Bill} z³", $"{order.Staff.Imie} {order.Staff.Nazwisko}", "STATUS" };
+                var objectList = new List<object>() { order.ID, orderDateHHmmToString, orderTableIDToString, orderStringMenu, $"{order.Bill} z³", $"{order.Staff.Imie} {order.Staff.Nazwisko}", order.Status };
                 valueRange.Values = new List<IList<object>> { objectList };
                 var appendRequest = service.Spreadsheets.Values.Append(valueRange, SpreadsheetId, range);
                 appendRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;

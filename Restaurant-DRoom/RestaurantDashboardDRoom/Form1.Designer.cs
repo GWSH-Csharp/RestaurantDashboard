@@ -34,7 +34,6 @@
             new_order_button = new Button();
             date_time_main = new Label();
             view_orders_button = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -60,7 +59,7 @@
             // 
             // new_order_button
             // 
-            new_order_button.Location = new Point(13, 505);
+            new_order_button.Location = new Point(13, 533);
             new_order_button.Name = "new_order_button";
             new_order_button.Size = new Size(228, 63);
             new_order_button.TabIndex = 4;
@@ -80,7 +79,7 @@
             // 
             // view_orders_button
             // 
-            view_orders_button.Location = new Point(13, 436);
+            view_orders_button.Location = new Point(13, 464);
             view_orders_button.Name = "view_orders_button";
             view_orders_button.Size = new Size(228, 63);
             view_orders_button.TabIndex = 4;
@@ -88,21 +87,14 @@
             view_orders_button.UseVisualStyleBackColor = true;
             view_orders_button.Click += view_orders_api_button;
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(333, 588);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(8, 8);
-            flowLayoutPanel1.TabIndex = 6;
-            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            dataGridView1.Location = new Point(352, 155);
+            dataGridView1.Location = new Point(363, 192);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(742, 413);
+            dataGridView1.Size = new Size(731, 434);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -163,9 +155,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1106, 580);
+            ClientSize = new Size(1106, 638);
             Controls.Add(dataGridView1);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(date_time_main);
             Controls.Add(view_orders_button);
             Controls.Add(new_order_button);
@@ -183,7 +174,6 @@
         private Button new_order_button;
         private Label date_time_main;
         private Button view_orders_button;
-        private FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer timer_now;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;

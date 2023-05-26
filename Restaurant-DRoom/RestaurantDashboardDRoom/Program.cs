@@ -17,6 +17,7 @@ namespace RestaurantDashboardDRoom
             public int TableID { get; set; }
             public double Bill { get; set; }
             public Pracownik Staff { get; set; }
+            public string Status { get; set; }
             public string ShortDescription { get { return $"ID: {ID},  Table: {TableID}, Date: {OrderDate}, Bill: {Bill}"; } }
 
             // Each menu position definition
