@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Sheets.v4;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Net;
 
 namespace RestarantDashboard
@@ -43,7 +34,6 @@ namespace RestarantDashboard
 
         private void activeOrdersList_SelectedIndexChanged(object sender, EventArgs e)
         {
-        //    RefreshList();
         }
 
         protected void RefreshList()
@@ -112,7 +102,7 @@ namespace RestarantDashboard
 
         private void readyToServeBtn_Click(object sender, EventArgs e)
         {
-            var checkedItems = activeOrdersList.CheckedItems.OfType<string>().ToList();
+            var checkedIndices = activeOrdersList.CheckedIndices.Cast<int>().ToList();
             var range = $"{sheet}!A2:F";
 
             var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
@@ -125,31 +115,43 @@ namespace RestarantDashboard
                 return;
             }
 
-            var rangeToUpdate = new List<IList<object>>();
+            var rangeToUpdate = new List<ValueRange>();
 
-            foreach (var checkedItem in checkedItems)
+            foreach (var checkedIndex in checkedIndices)
             {
-                var rowIndex = rows.IndexOf(checkedItem) + 2;
+                var rowIndex = checkedIndex + 2;
                 var newValue = "Yes";
-                var oldValue = values[rowIndex - 2][5].ToString();
+                var oldValue = values[checkedIndex][5].ToString();
 
                 if (oldValue != newValue)
                 {
-                    rangeToUpdate.Add(new List<object>() { newValue });
+                    var valueRange = new ValueRange
+                    {
+                        Values = new List<IList<object>> { new List<object> { newValue } },
+                        Range = $"{sheet}!F{rowIndex}"
+                    };
+                    rangeToUpdate.Add(valueRange);
                 }
             }
 
             if (rangeToUpdate.Count > 0)
             {
-                var valueRange = new ValueRange { Values = rangeToUpdate };
-                var updateRange = $"{sheet}!F2:F{rangeToUpdate.Count + 1}";
-                var updateRequest = service.Spreadsheets.Values.Update(valueRange, SpreadsheetId, updateRange);
-                updateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
-                var updateResponse = updateRequest.Execute();
+                var batchUpdateRequest = new BatchUpdateValuesRequest
+                {
+                    Data = rangeToUpdate,
+                    ValueInputOption = "USER_ENTERED"
+                };
+
+                var batchUpdateResponse = service.Spreadsheets.Values.BatchUpdate(batchUpdateRequest, SpreadsheetId).Execute();
             }
-            activeOrdersList.ClearSelected();
-            checkedItems.Clear();
+
             RefreshList();
+
+            activeOrdersList.ClearSelected();
+            for (int i = 0; i < activeOrdersList.Items.Count; i++)
+            {
+                activeOrdersList.SetItemChecked(i, false);
+            }
         }
     }
 }
