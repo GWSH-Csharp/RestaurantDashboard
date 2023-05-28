@@ -12,7 +12,7 @@ namespace RestaurantDashboardDRoom
         Order order = new Order();
         MenuPosition menuPosition = new MenuPosition();
         List<MenuPosition> menuPositions = new List<MenuPosition>();
-        List <string> menuPositionsString;
+        List<string> menuPositionsString;
 
         // Global variables
         string selectedTable, selectedEmployee;
@@ -211,8 +211,6 @@ namespace RestaurantDashboardDRoom
         void userListCombox_SelectedIndexChanged(object sender, EventArgs e)
         {
             returnSelectedUserID();
-            // order.Staff = db.pracownicy.Where(p => p.Id == selectedEmployeId).FirstOrDefault();
-
         }
 
         // Chosing table
@@ -242,6 +240,7 @@ namespace RestaurantDashboardDRoom
         // Submit the order and return to mother's form
         private void submit_button_Click(object sender, EventArgs e)
         {
+            string sheetTitle = DateTime.Now.ToString("dd/MM/yyyy");
             order.TableID = returnSelectedTableID();
             order.Staff = db.pracownicy.Where(p => p.Id == returnSelectedUserID()).FirstOrDefault();
             order.OrderDate = DateTime.Now;
@@ -249,21 +248,32 @@ namespace RestaurantDashboardDRoom
             order.Bill = returnTheBillTotal();
             order.Status = "OPEN";
 
-            // Pop up summary 
-            MessageBox.Show($"{order.OrderDate} \n {order.Staff.Imie} {order.Staff.Nazwisko} \n {order.TableID}");
-
             // Return the order object to the main form
             Form1 form1 = (Form1)Application.OpenForms["Form1"];
             if (form1 != null)
             {
+
                 apiSheetsRead apiSheetsRead = new apiSheetsRead();
                 apiSheetsRead.order = order;
                 DataGridView dataGridView1 = form1.dataGridView1;
 
-                // Refresh the entries in the DataGridView control and then append the new entry
-                apiSheetsRead.readEntries("Arkusz1", dataGridView1);
-                apiSheetsRead.createEntries("Arkusz1");
-                apiSheetsRead.readEntries("Arkusz1", dataGridView1);
+                apiSheetsRead.checkForSheet(DateTime.Now);
+
+                if (apiSheetsRead.checkForSheet(DateTime.Now) == false)
+                {
+                    // Create a new sheet and append the new entry
+                    apiSheetsRead.readEntries(sheetTitle, dataGridView1, false);
+                    apiSheetsRead.createNewDaySheet();
+                    apiSheetsRead.readEntries(sheetTitle, dataGridView1, false);
+                }
+                else
+                {
+                    // Refresh the entries in the DataGridView control and then append the new entry
+                    apiSheetsRead.readEntries(sheetTitle, dataGridView1, false);
+                    apiSheetsRead.createEntries(sheetTitle);
+                    apiSheetsRead.readEntries(sheetTitle, dataGridView1, false);
+                }
+
             }
 
 

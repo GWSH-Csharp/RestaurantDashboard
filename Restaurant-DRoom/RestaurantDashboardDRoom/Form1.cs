@@ -2,33 +2,30 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
 using static RestaurantDashboardDRoom.Program;
-using static RestaurantDashboardDRoom.Program.Order;
 
 namespace RestaurantDashboardDRoom
 {
     public partial class Form1 : Form
     {
         // Global variables
-        DateTime date_now = DateTime.Now;
-
-
-
-        // Google Api Spreadsheet global variables
-        static readonly string[] Scopes = { SheetsService.Scope.Spreadsheets };
-        static readonly string ApplicationName = "ApplicationName";
-        static readonly string SpreadsheetId = "1LTfSmD9ew3rT23FL7Ffw2t92mJlhG-Ept-AR0QE0_1U";
-
+        static DateTime date_now = DateTime.Now;
         static SheetsService service;
-
-
+        private string sheetTitle = null;
+        static string SpreadsheetId = "1LTfSmD9ew3rT23FL7Ffw2t92mJlhG-Ept-AR0QE0_1U";
 
         public Form1()
         {
 
             InitializeComponent();
 
+            // Set the datepicker to today
+
             // Google api new instance, starting connection
+            string[] Scopes = { SheetsService.Scope.Spreadsheets };
+            string ApplicationName = "ApplicationName";
             GoogleCredential credential;
+
+            /* ---  Access json file path  --- */
             using (var stream = new FileStream("restaurantdashboard-384320-b3d9c1d86d17.json", FileMode.Open, FileAccess.Read))
             {
                 credential = GoogleCredential.FromStream(stream)
@@ -45,8 +42,13 @@ namespace RestaurantDashboardDRoom
         {
             DataGridView dataGridView1 = new DataGridView();
             int orderIdInt;
+
+            // Google Api Spreadsheet global variables
+            static string SpreadsheetId = "1LTfSmD9ew3rT23FL7Ffw2t92mJlhG-Ept-AR0QE0_1U";
             internal static Order order { get; set; }
-            public void readEntries(string sheet, DataGridView dataGridView1)
+            string sheetTitle = DateTime.Now.ToString("dd/MM/yyyy");
+
+            public void readEntries(string sheet, DataGridView dataGridView1, bool popUpWarn)
             {
                 var range = $"{sheet}!A:Z";
                 var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
@@ -79,10 +81,12 @@ namespace RestaurantDashboardDRoom
                             dataGridView1.Rows.Add(row.ToArray());
                         }
                     }
-                    else
+                    else if (popUpWarn == true)
                     {
-                        MessageBox.Show("No data available.");
+                        MessageBox.Show("No data found");
                     }
+
+
                 }
 
                 clearBeforeYouGoAndAddHeaders();
@@ -92,7 +96,6 @@ namespace RestaurantDashboardDRoom
             public void createEntries(string sheet)
             {
                 // Order objects to string
-                string orderString = "";
                 string orderStringMenu = "";
 
                 order.ID = orderIdInt;
@@ -108,11 +111,7 @@ namespace RestaurantDashboardDRoom
                     foreach (var item in order.OrderMenu)
                     {
                         orderStringMenu += $"- {item.Nazwa} ({item.Cena} z³)\n";
-                        // Sum the bill
                     }
-                    orderString += $"------------------------\n";
-                    orderString += $"Short description: {order.ShortDescription}\n";
-                    orderString += $"------------------------\n";
                 }
                 getOrderMenuAndMakeItString();
 
@@ -124,6 +123,42 @@ namespace RestaurantDashboardDRoom
                 var appendRequest = service.Spreadsheets.Values.Append(valueRange, SpreadsheetId, range);
                 appendRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
                 var appendReponse = appendRequest.Execute();
+            }
+
+            public bool checkForSheet(DateTime selectedDate)
+            {
+                // Pick date and time and connect it with the sheet title
+                sheetTitle = selectedDate.ToString("dd/MM/yyyy");
+                var request = service.Spreadsheets.Get(SpreadsheetId); // Object to get data from the spreadsheet as specified by the parameters
+                var response = request.Execute();
+                var sheet = response.Sheets.FirstOrDefault(s => s.Properties.Title == sheetTitle);
+
+                if (sheet != null)
+                {
+                    readEntries(sheetTitle, dataGridView1, false);
+                    return true;
+                }
+                else
+                {
+                    // MessageBox.Show($"No data for: {sheetTitle}.");
+                    return false;
+                }
+            }
+
+            public void createNewDaySheet()
+            {
+                // Create a new sheet with the name of the current date
+                var addSheetRequest = new AddSheetRequest();
+                addSheetRequest.Properties = new SheetProperties();
+                addSheetRequest.Properties.Title = sheetTitle;
+                var addSheetRequestList = new List<Request>();
+                var addSheetRequestContainer = new Request();
+                addSheetRequestContainer.AddSheet = addSheetRequest;
+                addSheetRequestList.Add(addSheetRequestContainer);
+                var batchUpdateRequest = new BatchUpdateSpreadsheetRequest();
+                batchUpdateRequest.Requests = addSheetRequestList;
+                var batchUpdateResponse = service.Spreadsheets.BatchUpdate(batchUpdateRequest, SpreadsheetId);
+                batchUpdateResponse.Execute();
             }
         }
 
@@ -142,16 +177,49 @@ namespace RestaurantDashboardDRoom
             newForm.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         void view_orders_api_button(object sender, EventArgs e)
         {
             apiSheetsRead apiSheetsRead = new apiSheetsRead();
-            apiSheetsRead.readEntries("Arkusz1", dataGridView1);
+            try
+            {
+                apiSheetsRead.readEntries(sheetTitle, dataGridView1, true);
+            }
+            catch (Google.GoogleApiException ex)
+            {
+                MessageBox.Show("No data found");
+            }
+
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedDate = dateTimePicker1.Value;
+            apiSheetsRead apiSheetsRead = new apiSheetsRead();
+            apiSheetsRead.checkForSheet(selectedDate);
+            sheetTitle = selectedDate.ToString("dd/MM/yyyy");
+            string todayDateToString = DateTime.Now.ToString("dd/MM/yyyy");
+            try
+            {
+                apiSheetsRead.readEntries(sheetTitle, dataGridView1, true);
+            }
+            catch (Google.GoogleApiException ex)
+            {
+                MessageBox.Show("An error occurred while fetching data from the API.");
+                // Handle the exception as needed
+            }
+
+            // Disable the new order button if the sheet is not the current date
+            if (sheetTitle == todayDateToString)
+            {
+                new_order_button.Enabled = true;
+            }
+            else
+            {
+                new_order_button.Enabled = false;
+            }
+        }
+
 
     }
 }

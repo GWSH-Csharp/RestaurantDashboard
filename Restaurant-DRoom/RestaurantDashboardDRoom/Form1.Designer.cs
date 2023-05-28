@@ -43,6 +43,7 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             timer_now = new System.Windows.Forms.Timer(components);
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -59,12 +60,13 @@
             // 
             // new_order_button
             // 
-            new_order_button.Location = new Point(13, 533);
+            new_order_button.BackColor = SystemColors.Control;
+            new_order_button.Location = new Point(12, 611);
             new_order_button.Name = "new_order_button";
             new_order_button.Size = new Size(228, 63);
             new_order_button.TabIndex = 4;
             new_order_button.Text = "New Order";
-            new_order_button.UseVisualStyleBackColor = true;
+            new_order_button.UseVisualStyleBackColor = false;
             new_order_button.Click += new_order_button_Click;
             // 
             // date_time_main
@@ -79,24 +81,25 @@
             // 
             // view_orders_button
             // 
-            view_orders_button.Location = new Point(13, 464);
+            view_orders_button.BackColor = SystemColors.Control;
+            view_orders_button.Location = new Point(12, 542);
             view_orders_button.Name = "view_orders_button";
             view_orders_button.Size = new Size(228, 63);
             view_orders_button.TabIndex = 4;
             view_orders_button.Text = "View Orders";
-            view_orders_button.UseVisualStyleBackColor = true;
+            view_orders_button.UseVisualStyleBackColor = false;
             view_orders_button.Click += view_orders_api_button;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            dataGridView1.Location = new Point(363, 192);
+            dataGridView1.Location = new Point(363, 188);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(731, 434);
+            dataGridView1.Size = new Size(731, 486);
             dataGridView1.TabIndex = 7;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
@@ -151,11 +154,21 @@
             timer_now.Interval = 1000;
             timer_now.Tick += Timer_now_Tick;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(363, 159);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 8;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1106, 638);
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(1106, 686);
+            Controls.Add(dateTimePicker1);
             Controls.Add(dataGridView1);
             Controls.Add(date_time_main);
             Controls.Add(view_orders_button);
@@ -183,5 +196,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         public DataGridView dataGridView1;
+        private DateTimePicker dateTimePicker1;
     }
 }

@@ -45,13 +45,14 @@
             // 
             // submit_button
             // 
+            submit_button.BackColor = SystemColors.Control;
             submit_button.Enabled = false;
             submit_button.Location = new Point(12, 374);
             submit_button.Name = "submit_button";
             submit_button.Size = new Size(225, 64);
             submit_button.TabIndex = 0;
             submit_button.Text = "Submit";
-            submit_button.UseVisualStyleBackColor = true;
+            submit_button.UseVisualStyleBackColor = false;
             submit_button.Click += submit_button_Click;
             // 
             // tableLabel
@@ -65,6 +66,7 @@
             // 
             // tableListCombox
             // 
+            tableListCombox.BackColor = SystemColors.Control;
             tableListCombox.DropDownStyle = ComboBoxStyle.DropDownList;
             tableListCombox.FormattingEnabled = true;
             tableListCombox.Location = new Point(12, 91);
@@ -84,6 +86,7 @@
             // 
             // userListCombox
             // 
+            userListCombox.BackColor = SystemColors.Control;
             userListCombox.DropDownStyle = ComboBoxStyle.DropDownList;
             userListCombox.FormattingEnabled = true;
             userListCombox.Location = new Point(12, 34);
@@ -103,6 +106,7 @@
             // 
             // menu_chose_combox
             // 
+            menu_chose_combox.BackColor = SystemColors.Control;
             menu_chose_combox.DropDownStyle = ComboBoxStyle.DropDownList;
             menu_chose_combox.FormattingEnabled = true;
             menu_chose_combox.Location = new Point(12, 149);
@@ -113,6 +117,7 @@
             // 
             // actual_order
             // 
+            actual_order.BackColor = SystemColors.Control;
             actual_order.Location = new Point(552, 34);
             actual_order.Name = "actual_order";
             actual_order.Size = new Size(236, 404);
@@ -122,6 +127,7 @@
             // 
             // menu_category_view
             // 
+            menu_category_view.BackColor = SystemColors.Control;
             menu_category_view.Location = new Point(243, 34);
             menu_category_view.Name = "menu_category_view";
             menu_category_view.Size = new Size(236, 404);
@@ -155,7 +161,6 @@
             add_button.Text = "Add";
             add_button.UseVisualStyleBackColor = true;
             add_button.Click += add_button_Click;
-
             // 
             // remove_button
             // 
@@ -171,6 +176,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(menu_category_view);
             Controls.Add(actual_order);
