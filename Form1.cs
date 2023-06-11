@@ -56,6 +56,7 @@ namespace RestaurantDashboardKitchen
                 {
                     dataGridView1.Rows.Clear();
                     dataGridView1.Columns.Clear();
+                    dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                     dataGridView1.Columns.Add("ID", "ID");
                     dataGridView1.Columns.Add("TIME", "TIME");
                     dataGridView1.Columns.Add("TABLE", "TABLE");
@@ -63,7 +64,9 @@ namespace RestaurantDashboardKitchen
                     dataGridView1.Columns.Add("BILL", "BILL");
                     dataGridView1.Columns.Add("STAFF", "STAFF");
                     dataGridView1.Columns.Add("STATUS", "STATUS");
+                    dataGridView1.Columns["ORDER_MENU"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 }
+
                 void addTheRowsAfterHeaders()
                 {
                     if (values != null && values.Count > 0)
@@ -215,13 +218,18 @@ namespace RestaurantDashboardKitchen
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                int orderId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
-                int rowIndex = selectedRow.Index;
-                dataGridView1.Rows[rowIndex].Cells["STATUS"].Value = "Gotowe";
-                UpdateOrderStatusInSheets(orderId, "Gotowe");
+                string status = "Gotowe";
+
+                foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
+                {
+                    int orderId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+                    int rowIndex = selectedRow.Index;
+                    dataGridView1.Rows[rowIndex].Cells["STATUS"].Value = status;
+                    UpdateOrderStatusInSheets(orderId, status);
+                }
             }
         }
+
 
 
         private void UpdateOrderStatusInSheets(int orderId, string status)
@@ -260,42 +268,41 @@ namespace RestaurantDashboardKitchen
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                int orderId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
-
-                var range = $"{sheetTitle}!A:G";
-                var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
-                var response = request.Execute();
-                var values = response.Values;
-
-                if (values != null && values.Count > 0)
+                foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
                 {
-                    for (int i = 0; i < values.Count; i++)
+                    int orderId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+                    var range = $"{sheetTitle}!A:G";
+                    var request = service.Spreadsheets.Values.Get(SpreadsheetId, range);
+                    var response = request.Execute();
+                    var values = response.Values;
+
+                    if (values != null && values.Count > 0)
                     {
-                        var row = values[i];
-                        if (row.Count >= 7 && row[0] != null && int.TryParse(row[0].ToString(), out int rowOrderId) && rowOrderId == orderId)
+                        for (int i = 0; i < values.Count; i++)
                         {
-                            row[6] = "STATUS";
+                            var row = values[i];
+                            if (row.Count >= 7 && row[0] != null && int.TryParse(row[0].ToString(), out int rowOrderId) && rowOrderId == orderId)
+                            {
+                                row[6] = "STATUS";
 
-                            var updateRange = $"{sheetTitle}!A{i + 1}:G{i + 1}";
-                            var updateValueRange = new ValueRange();
-                            updateValueRange.Values = new List<IList<object>> { row };
-                            var updateRequest = service.Spreadsheets.Values.Update(updateValueRange, SpreadsheetId, updateRange);
-                            updateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
-                            var updateResponse = updateRequest.Execute();
+                                var updateRange = $"{sheetTitle}!A{i + 1}:G{i + 1}";
+                                var updateValueRange = new ValueRange();
+                                updateValueRange.Values = new List<IList<object>> { row };
+                                var updateRequest = service.Spreadsheets.Values.Update(updateValueRange, SpreadsheetId, updateRange);
+                                updateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
+                                var updateResponse = updateRequest.Execute();
 
-                            break;
+                                break;
+                            }
                         }
                     }
                 }
+
+                apiSheetsRead sheetsRead = new apiSheetsRead();
+                sheetsRead.readEntries(sheetTitle, dataGridView1, false);
             }
-
-            apiSheetsRead sheetsRead = new apiSheetsRead();
-            sheetsRead.readEntries(sheetTitle, dataGridView1, false);
         }
-
-
-
-
 
     }
 }
