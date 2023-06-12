@@ -205,6 +205,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1106, 686);
             Controls.Add(cancel_order_status);
@@ -215,6 +216,7 @@
             Controls.Add(view_orders_button);
             Controls.Add(update_order_status);
             Controls.Add(pictureBox1);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Restaurant Dashboard - Kitchen View";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
