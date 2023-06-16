@@ -381,5 +381,5 @@ namespace RestaurantDashboardKitchen
             lastRefresh.Text = "Last refresh: " + currentTime;
         }
     }
-    
+
 }

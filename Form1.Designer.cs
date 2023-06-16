@@ -205,8 +205,6 @@
             // autoRefresh
             // 
             autoRefresh.AutoSize = true;
-            autoRefresh.Checked = true;
-            autoRefresh.CheckState = CheckState.Checked;
             autoRefresh.Location = new Point(13, 427);
             autoRefresh.Name = "autoRefresh";
             autoRefresh.Size = new Size(124, 19);
@@ -220,6 +218,7 @@
             lastRefresh.BackColor = SystemColors.Control;
             lastRefresh.Location = new Point(13, 452);
             lastRefresh.Name = "lastRefresh";
+            lastRefresh.ReadOnly = true;
             lastRefresh.Size = new Size(227, 23);
             lastRefresh.TabIndex = 12;
             // 
