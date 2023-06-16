@@ -1,6 +1,7 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
+using System.ComponentModel;
 using static RestaurantDashboardKitchen.Program;
 
 namespace RestaurantDashboardKitchen
@@ -32,6 +33,9 @@ namespace RestaurantDashboardKitchen
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
+
+
+
         }
 
         public class apiSheetsRead
@@ -52,6 +56,8 @@ namespace RestaurantDashboardKitchen
 
                 orderIdInt = dataGridView1.Rows.Count;
 
+
+
                 void clearBeforeYouGoAndAddHeaders()
                 {
                     dataGridView1.Rows.Clear();
@@ -65,6 +71,15 @@ namespace RestaurantDashboardKitchen
                     dataGridView1.Columns.Add("STAFF", "STAFF");
                     dataGridView1.Columns.Add("STATUS", "STATUS");
                     dataGridView1.Columns["ORDER_MENU"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+                    dataGridView1.Columns["ID"].Width = 20;
+                    dataGridView1.Columns["TIME"].Width = 50;
+                    dataGridView1.Columns["TABLE"].Width = 60;
+                    dataGridView1.Columns["ORDER_MENU"].Width = 300;
+                    dataGridView1.Columns["BILL"].Width = 50;
+                    dataGridView1.Columns["STAFF"].Width = 80;
+                    dataGridView1.Columns["STATUS"].Width = 80;
+
                 }
 
                 void addTheRowsAfterHeaders()
@@ -88,7 +103,6 @@ namespace RestaurantDashboardKitchen
                 clearBeforeYouGoAndAddHeaders();
                 addTheRowsAfterHeaders();
             }
-
 
             public void createEntries(string sheet)
             {
@@ -159,7 +173,7 @@ namespace RestaurantDashboardKitchen
 
 
 
-        void view_orders_api_button(object sender, EventArgs e)
+        private void view_orders_api_button(object sender, EventArgs e)
         {
             apiSheetsRead apiSheetsRead = new apiSheetsRead();
             try
@@ -169,7 +183,20 @@ namespace RestaurantDashboardKitchen
 
                 if (sheetExists)
                 {
+                    sheetTitle = selectedDate.ToString("dd/MM/yyyy");
                     apiSheetsRead.readEntries(sheetTitle, dataGridView1, true);
+
+                    for (int i = dataGridView1.Rows.Count - 1; i >= 0; i--)
+                    {
+                        if (dataGridView1.Rows[i].Cells["STATUS"].Value != null)
+                        {
+                            string status = dataGridView1.Rows[i].Cells["STATUS"].Value.ToString();
+                            if (status == "CLOSED")
+                            {
+                                dataGridView1.Rows.RemoveAt(i);
+                            }
+                        }
+                    }
                 }
                 else
                 {
@@ -181,7 +208,12 @@ namespace RestaurantDashboardKitchen
             {
                 MessageBox.Show("No data found");
             }
+
+            UpdateLastRefreshTime();
         }
+
+
+
 
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -218,7 +250,7 @@ namespace RestaurantDashboardKitchen
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string status = "Gotowe";
+                string status = "READY";
 
                 foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
                 {
@@ -284,7 +316,7 @@ namespace RestaurantDashboardKitchen
                             var row = values[i];
                             if (row.Count >= 7 && row[0] != null && int.TryParse(row[0].ToString(), out int rowOrderId) && rowOrderId == orderId)
                             {
-                                row[6] = "STATUS";
+                                row[6] = "OPEN";
 
                                 var updateRange = $"{sheetTitle}!A{i + 1}:G{i + 1}";
                                 var updateValueRange = new ValueRange();
@@ -303,6 +335,51 @@ namespace RestaurantDashboardKitchen
                 sheetsRead.readEntries(sheetTitle, dataGridView1, false);
             }
         }
+        private System.Windows.Forms.Timer timer;
 
+
+        private void autoRefresh_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autoRefresh.Checked)
+            {
+                StartAutoRefresh();
+                lastRefresh.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                StopAutoRefresh();
+                lastRefresh.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void StartAutoRefresh()
+        {
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 15000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void StopAutoRefresh()
+        {
+            if (timer != null)
+            {
+                timer.Stop();
+                timer.Dispose();
+                timer = null;
+            }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            view_orders_api_button(sender, e);
+        }
+
+        private void UpdateLastRefreshTime()
+        {
+            string currentTime = DateTime.Now.ToString("HH:mm:ss");
+            lastRefresh.Text = "Last refresh: " + currentTime;
+        }
     }
+    
 }

@@ -47,6 +47,8 @@
             dateTimePicker1 = new DateTimePicker();
             quit = new Button();
             cancel_order_status = new Button();
+            autoRefresh = new CheckBox();
+            lastRefresh = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -200,6 +202,27 @@
             cancel_order_status.UseVisualStyleBackColor = false;
             cancel_order_status.Click += cancel_order_status_Click;
             // 
+            // autoRefresh
+            // 
+            autoRefresh.AutoSize = true;
+            autoRefresh.Checked = true;
+            autoRefresh.CheckState = CheckState.Checked;
+            autoRefresh.Location = new Point(13, 427);
+            autoRefresh.Name = "autoRefresh";
+            autoRefresh.Size = new Size(124, 19);
+            autoRefresh.TabIndex = 11;
+            autoRefresh.Text = "Automatic Refresh";
+            autoRefresh.UseVisualStyleBackColor = true;
+            autoRefresh.CheckedChanged += autoRefresh_CheckedChanged;
+            // 
+            // lastRefresh
+            // 
+            lastRefresh.BackColor = SystemColors.Control;
+            lastRefresh.Location = new Point(13, 452);
+            lastRefresh.Name = "lastRefresh";
+            lastRefresh.Size = new Size(227, 23);
+            lastRefresh.TabIndex = 12;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -207,6 +230,8 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1106, 686);
+            Controls.Add(lastRefresh);
+            Controls.Add(autoRefresh);
             Controls.Add(cancel_order_status);
             Controls.Add(quit);
             Controls.Add(dateTimePicker1);
@@ -230,6 +255,10 @@
         private Label date_time_main;
         private Button view_orders_button;
         private System.Windows.Forms.Timer timer_now;
+        public DataGridView dataGridView1;
+        private DateTimePicker dateTimePicker1;
+        private Button quit;
+        private Button cancel_order_status;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -237,9 +266,7 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
-        public DataGridView dataGridView1;
-        private DateTimePicker dateTimePicker1;
-        private Button quit;
-        private Button cancel_order_status;
+        private CheckBox autoRefresh;
+        private TextBox lastRefresh;
     }
 }
