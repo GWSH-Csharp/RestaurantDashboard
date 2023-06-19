@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "c8zCkk66mg4kIlmUkyKxLRfdkFplOXKrp1pbeMcJl5sA9MH5ecgdBOpLlFJ1izgdQYt8CylRdw21Wbw8RMYHdw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\piotr\\Desktop\\Restaurant Dashboard Final\\RestaurantDashboardDRoom\\RestaurantDashboardDRoom.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\piotr\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\piotr\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\piotr\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\piotr\\.nuget\\packages\\google.apis.sheets.v4\\1.60.0.2979\\google.apis.sheets.v4.1.60.0.2979.nupkg.sha512",
+    "C:\\Users\\piotr\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

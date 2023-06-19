@@ -1,0 +1,122 @@
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.exe
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.deps.json
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.runtimeconfig.json
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.AssemblyReference.cache
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Form1.resources
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Properties.Resources.resources
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.GenerateResource.cache
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.GeneratedMSBuildEditorConfig.editorconfig
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfoInputs.cache
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfo.cs
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CoreCompileInputs.cache
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\refint\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.genruntimeconfig.cache
+C:\fafa194\CSharp_Kuchnia_Sala\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\ref\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.exe
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.deps.json
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.runtimeconfig.json
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.AssemblyReference.cache
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Form1.resources
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Properties.Resources.resources
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.GenerateResource.cache
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.GeneratedMSBuildEditorConfig.editorconfig
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfoInputs.cache
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfo.cs
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CoreCompileInputs.cache
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\refint\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.genruntimeconfig.cache
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\ref\RestaurantDashboardDRoom.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.NewForm.resources
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\fafa194\CSharp_Kuchnia_Sala\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CopyComplete
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.exe
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.deps.json
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.runtimeconfig.json
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.AssemblyReference.cache
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Form1.resources
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.NewForm.resources
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Properties.Resources.resources
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.GenerateResource.cache
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfoInputs.cache
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfo.cs
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CoreCompileInputs.cache
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CopyComplete
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\refint\RestaurantDashboardDRoom.dll
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.genruntimeconfig.cache
+C:\Users\fafa1\OneDrive\Pulpit\git-files\RestaurantDashboard\Restaurant-DRoom\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\ref\RestaurantDashboardDRoom.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.AssemblyReference.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\refint\RestaurantDashboardDRoom.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.exe
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.deps.json
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.runtimeconfig.json
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Form1.resources
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.NewForm.resources
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Properties.Resources.resources
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.GenerateResource.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfoInputs.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfo.cs
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CoreCompileInputs.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CopyComplete
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.genruntimeconfig.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\ref\RestaurantDashboardDRoom.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.exe
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.deps.json
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.runtimeconfig.json
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.AssemblyReference.cache
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Form1.resources
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.NewForm.resources
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.Properties.Resources.resources
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.GenerateResource.cache
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfoInputs.cache
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.AssemblyInfo.cs
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CoreCompileInputs.cache
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.csproj.CopyComplete
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\refint\RestaurantDashboardDRoom.dll
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.pdb
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\RestaurantDashboardDRoom.genruntimeconfig.cache
+C:\Users\piotr\Desktop\Restaurant Dashboard Final\RestaurantDashboardDRoom\obj\Debug\net6.0-windows\ref\RestaurantDashboardDRoom.dll
