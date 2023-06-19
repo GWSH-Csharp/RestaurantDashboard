@@ -1,0 +1,75 @@
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.exe
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.deps.json
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.runtimeconfig.json
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.pdb
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.AssemblyReference.cache
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.Form1.resources
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.Properties.Resources.resources
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.GenerateResource.cache
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.AssemblyInfoInputs.cache
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.AssemblyInfo.cs
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.CoreCompileInputs.cache
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.CopyComplete
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\refint\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.pdb
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.genruntimeconfig.cache
+C:\Users\piotr\source\repos\RestaurantDashboardKitchen\RestaurantDashboardKitchen\RestaurantDashboardKitchen\obj\Debug\net6.0-windows\ref\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.exe
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.deps.json
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.runtimeconfig.json
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.pdb
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.AssemblyReference.cache
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.Form1.resources
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.Properties.Resources.resources
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.GenerateResource.cache
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.AssemblyInfoInputs.cache
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.AssemblyInfo.cs
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.CoreCompileInputs.cache
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.CopyComplete
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\refint\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.pdb
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.genruntimeconfig.cache
+C:\Users\piotr\source\repos\KuchniaSala\RestaurantDashboard\obj\Debug\net6.0-windows\ref\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.exe
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.deps.json
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.runtimeconfig.json
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\RestaurantDashboardKitchen.pdb
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\Google.Apis.Sheets.v4.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.AssemblyReference.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.Form1.resources
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.Properties.Resources.resources
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.GenerateResource.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.AssemblyInfoInputs.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.AssemblyInfo.cs
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.CoreCompileInputs.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.csproj.CopyComplete
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\refint\RestaurantDashboardKitchen.dll
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.pdb
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\RestaurantDashboardKitchen.genruntimeconfig.cache
+C:\Users\piotr\source\repos\Restaurant Dashboard Final\RestaurantDashboard - Kitchen\obj\Debug\net6.0-windows\ref\RestaurantDashboardKitchen.dll
